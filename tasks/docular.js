@@ -58,13 +58,13 @@ module.exports = function(grunt) {
 
         } catch (e) {
 
-            console.log("ERROR:".red, ' Could not start node server', e);
+            grunt.log.error("ERROR:".red, ' Could not start node server', e);
 
         }
 
         //Notify the user
-        console.log("");
-        console.log("Documentation server running at ".yellow + ('http://127.0.0.1:' + port + '/').green);
+        grunt.log.write("");
+        grunt.log.write("Documentation server running at ".yellow + ('http://127.0.0.1:' + port + '/').green);
 
     });
 
